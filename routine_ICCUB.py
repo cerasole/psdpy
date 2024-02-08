@@ -417,8 +417,6 @@ class ICCUB_run (object):
                     for ievt in range(self.nevt):
                         if combination_of_psd_adc_data[ievt] > 0:
                             z_value = np.sqrt(extFunc0.GetX(combination_of_psd_adc_data[ievt]))
-                            if z_value > 50:
-                                print ("Maggiore di 50 YEEEEEEEEEEEEEE")
                         else:
                             z_value = 0.
                         self.data["Z"][SiPM_type]["Bar %d" % ibar][ievt] = z_value
